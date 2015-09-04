@@ -96,17 +96,22 @@
                                 <p class="login-name">
                                     <input id="login_name" type="text" placeholder="ex. John101" value="" name="name" />
                                 </p>
-                                <p class="login-email">
-                                    <input id="login_email" type="password" placeholder="Password" value="" name="email" />
+                                <p class="login-password">
+                                    <input id="login_password" type="password" placeholder="Password" value="" name="password" />
                                 </p>
                                 <p class="login-submit" align="center">
                                     <a id="login-submit" class="submit" href="#">Login</a>
                                     <a id="forgot-password" class="forgot" href="#">Forgot Password?</a>
                                 </p>
-
-                                <div id="response">
-
+                                <div class="login-error alert alert-error fade in" style="display:none;">
+                                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                                    <strong>Wrong username or password!</strong>
                                 </div>
+                                <div class="login-ok alert alert-success fade in" style="display:none;">
+                                    <a class="close" data-dismiss="alert" href="#">&times;</a>
+                                    <strong>Login Success!</strong>
+                                </div>
+
                             </form>
                         </div>
                     </div>

@@ -7,6 +7,7 @@ var BRUSHED = window.BRUSHED || {};
 ================================================== */
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
+
 BRUSHED.mobileNav = function(){
 	var windowWidth = $(window).width();
 	
@@ -183,6 +184,25 @@ BRUSHED.fancyBox = function(){
 }
 
 
+
+$("#login-submit").on('click',function() {
+	$.ajax({
+		method: "POST",
+		url: "controller/authcontroller.php",
+		data: { id: $('#login_name').val(), pass: $("#login_password").val() }
+	})
+		.success(function( msg ) {
+			if (msg != ""){
+				$(".login-ok").css("display","none");
+				$(".login-error").slideDown();
+			}else{
+				$(".login-error").css("display","none");
+				$(".login-ok").slideDown();
+			}
+		}
+	)
+	return false;
+});
 /* ==================================================
    Contact Form
 ================================================== */
