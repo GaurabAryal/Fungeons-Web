@@ -183,21 +183,50 @@ BRUSHED.fancyBox = function(){
 	}
 }
 
+/* ==================================================
+Login
+ ================================================== */
 
 
 $("#login-submit").on('click',function() {
+	$(".spin-log").css("display","inline-block");
 	$.ajax({
 		method: "POST",
 		url: "controller/authcontroller.php",
-		data: { id: $('#login_name').val(), pass: $("#login_password").val() }
+		data: { function: "login", id: $('#login_name').val(), pass: $("#login_password").val() }
 	})
 		.success(function( msg ) {
+			$(".spin-log").css("display","none");
 			if (msg != ""){
 				$(".login-ok").css("display","none");
 				$(".login-error").slideDown();
 			}else{
 				$(".login-error").css("display","none");
 				$(".login-ok").slideDown();
+			}
+		}
+	)
+	return false;
+});
+/* ==================================================
+Registration
+ ================================================== */
+
+$("#signup-submit").on('click',function() {
+	$(".spin-reg").css("display","inline-block");
+	$.ajax({
+		method: "POST",
+		url: "controller/authcontroller.php",
+		data: { function: "signup", id: $('#signup_name').val(), pass: $("#signup-password").val() }
+	})
+		.success(function( msg ) {
+			$(".spin-reg").css("display","none");
+			if (msg != ""){
+				$(".lsignup-ok").css("display","none");
+				$(".signup-error").slideDown();
+			}else{
+				$(".signup-error").css("display","none");
+				$(".signup-ok").slideDown();
 			}
 		}
 	)
