@@ -5,7 +5,7 @@
  * Date: 2015-09-03
  * Time: 3:03 PM
  */
-require '../vendor/autoload.php';
+require '.../vendor/autoload.php';
 use Parse\ParseObject;
 use Parse\ParseClient;
 use Parse\ParseUser;
