@@ -202,7 +202,7 @@ $("#login-submit").on('click',function() {
 				$(".login-error").slideDown();
 			}else{
 				$(".login-error").css("display","none");
-				$(".login-ok").slideDown();
+				window.location.href = "dashboard.php";
 			}
 		}
 	)

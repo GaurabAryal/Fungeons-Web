@@ -48,7 +48,7 @@ class ParseFileTest extends \PHPUnit_Framework_TestCase {
 
   public function testParseFileDownload()
   {
-    $file = ParseFile::_createFromServer("index.html", "http://example.com");
+    $file = ParseFile::_createFromServer("index.php", "http://example.com");
     $data = $file->getData();
     $this->assertTrue(
       strpos($data, 'Example Domain') !== false
