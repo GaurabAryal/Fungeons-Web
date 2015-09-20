@@ -12,7 +12,7 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 
   (function(root, factory) {
     if (typeof define === 'function' && define.amd) {
-      return define('waypoints', ['jquery'], function($) {
+      return define('waypoints', ['jquery.tweet'], function($) {
         return factory($, root);
       });
     } else {

@@ -4,7 +4,7 @@
 
 (function (factory) {
 	if (typeof define === 'function' && define.amd)
-	define(['jquery'], factory); // AMD support for RequireJS etc.
+	define(['jquery.tweet'], factory); // AMD support for RequireJS etc.
 	else
 	factory(jQuery);
 }(function ($) {

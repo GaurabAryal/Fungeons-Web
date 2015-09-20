@@ -192,11 +192,12 @@ $("#login-submit").on('click',function() {
 	$(".spin-log").css("display","inline-block");
 	$.ajax({
 		method: "POST",
-		url: "controller/authcontroller.php",
+		url: "Controller/AuthController.php",
 		data: { function: "login", id: $('#login_name').val(), pass: $("#login_password").val() }
 	})
 		.success(function( msg ) {
 			$(".spin-log").css("display","none");
+			alert(msg);
 			if (msg != ""){
 				$(".login-ok").css("display","none");
 				$(".login-error").slideDown();
