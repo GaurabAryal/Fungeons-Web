@@ -197,7 +197,6 @@ $("#login-submit").on('click',function() {
 	})
 		.success(function( msg ) {
 			$(".spin-log").css("display","none");
-			alert(msg);
 			if (msg != ""){
 				$(".login-ok").css("display","none");
 				$(".login-error").slideDown();
