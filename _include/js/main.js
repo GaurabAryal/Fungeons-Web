@@ -217,7 +217,7 @@ $("#signup-submit").on('click',function() {
 	$(".spin-reg").css("display","inline-block");
 	$.ajax({
 		method: "POST",
-		url: "controller/authcontroller.php",
+		url: "Controller/AuthController.php",
 		data: { function: "signup", id: $('#signup_name').val(), pass: $("#signup-password").val() }
 	})
 		.success(function( msg ) {
