@@ -5,7 +5,7 @@
 
     <title>Fungeons | Home</title>
 
-    <meta name="description" content="Insert Your Site Description" />
+    <meta name="description" content="Fungeons" />
 
     <!-- Mobile Specifics -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
